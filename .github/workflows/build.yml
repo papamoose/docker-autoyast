@@ -1,6 +1,8 @@
 name: Build all docker images
 
 on:
+  schedule:
+  - cron: '40 6 * * 4'
   pull_request:
     branches:
     - "main"
@@ -13,8 +15,6 @@ on:
     - "v*.*.*"
   release:
     types: [created]
-  #schedule:
-  #- cron: "40 6 * * 7"
 
 env:
   REGISTRY: ghcr.io
