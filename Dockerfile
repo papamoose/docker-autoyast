@@ -5,4 +5,5 @@ RUN zypper install -y \
   less \
   nano
 
-CMD ["/usr/sbin/yast2"]
+CMD ["--help"]
+ENTRYPOINT ["/usr/sbin/yast2"]
