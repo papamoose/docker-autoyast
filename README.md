@@ -3,6 +3,7 @@ Run yast2 autoyast from a docker container. Used to verify autoinst.xml files.
 
 
 ## Docs
+* https://doc.opensuse.org/projects/autoyast/#sec-basic-checks
 * https://doc.opensuse.org/projects/autoyast
 * https://en.opensuse.org/SDB:Linuxrc
 
