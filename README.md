@@ -47,3 +47,7 @@ OPTIONS:
 $ docker run -it -v ./:/mnt ghcr.io/papamoose/autoyast autoyast check-profile run-erb=true filename=/mnt/15.5.autoinst.xml.erb output=/mnt/result.xml.erb
 ```
 
+Get into the container and run manually.
+```
+$ docker run -v ./:/mnt -it --entrypoint /bin/bash ghcr.io/papamoose/autoyast
+```
