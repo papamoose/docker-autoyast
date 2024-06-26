@@ -13,6 +13,8 @@ on:
     - "v*.*.*"
   release:
     types: [created]
+  #schedule:
+  #- cron: "40 6 * * 7"
 
 env:
   REGISTRY: ghcr.io
@@ -22,8 +24,11 @@ permissions:
   packages: write
 
 jobs:
-  job1:
+
+  build:
+
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
@@ -62,7 +67,8 @@ jobs:
             type=semver,pattern={{major}}
             type=sha
             type=raw,${{ github.event.release.tag_name }}
-            type=raw,value=latest,enable=${{ github.event_name == 'release' }}
+            type=raw,value=latest,enable=${{ github.event_name == 'push' }}
+            #type=raw,value=latest,enable=${{ github.event_name == 'release' }}
           labels: |
             maintainer=papamoose
             org.opencontainers.image.title=autoyast
