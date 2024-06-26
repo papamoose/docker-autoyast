@@ -13,8 +13,8 @@ on:
     - "v*.*.*"
   release:
     types: [created]
-  #schedule:
-  #- cron: "40 6 * * 7"
+  schedule:
+  - cron: "40 6 * * 7"
 
 env:
   REGISTRY: ghcr.io
